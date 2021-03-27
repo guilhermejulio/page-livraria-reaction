@@ -19,6 +19,10 @@ export const Presentation = styled.div`
 export const Content = styled.div`
   width: 100%;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const appearFromDown = keyframes`
