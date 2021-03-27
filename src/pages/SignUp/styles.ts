@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
 
-import signInBackgroundImg from '../../assets/sign-in-background.png';
+import signUpBackground from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -11,47 +11,14 @@ export const Container = styled.div`
 `;
 
 export const Presentation = styled.div`
-  display: flex;
   flex: 1;
-  flex-direction: column;
-  place-content: center;
-  align-items: center;
-  background: url(${signInBackgroundImg}) no-repeat center;
+  background: url(${signUpBackground}) no-repeat center;
   background-size: cover;
-
-  h1,
-  h2 {
-    margin: 40px 0;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 70px;
-  }
-
-  h2 {
-    font-size: 20px;
-    color: #20385a;
-    line-height: 50px;
-  }
-
-  div {
-    background-color: #cbf1f1;
-    width: 500px;
-  }
-
-  @media (max-width: 868px) {
-    display: none;
-  }
 `;
 
 export const Content = styled.div`
   width: 100%;
   max-width: 600px;
-
-  @media (max-width: 868px) {
-    max-width: 100%;
-  }
 `;
 
 const appearFromDown = keyframes`
@@ -76,7 +43,7 @@ export const AnimationContainer = styled.div`
   animation: ${appearFromDown} 1s;
 
   form {
-    margin: 80px 0;
+    margin: 50px 0;
     width: 340px;
     text-align: center;
 

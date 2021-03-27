@@ -1,7 +1,6 @@
 import React from 'react';
-import { FiLogIn } from 'react-icons/fi';
-import { IoAt, IoLockClosedOutline } from 'react-icons/io5';
-
+import { FiArrowDownLeft } from 'react-icons/fi';
+import { IoAt, IoLockClosedOutline, IoPersonOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 import Input from '../../components/Input';
@@ -9,19 +8,15 @@ import Button from '../../components/Button';
 
 import { Container, Presentation, Content, AnimationContainer } from './styles';
 
-const SignIn: React.FC = () => (
+const SignUp: React.FC = () => (
   <Container>
-    <Presentation>
-      <h1>Livraria Virtual Reaction</h1>
-
-      <div>
-        <h2>Para uma nova geração de leitores</h2>
-      </div>
-    </Presentation>
+    <Presentation />
     <Content>
       <AnimationContainer>
         <form>
-          <h1>Faça seu logon</h1>
+          <h1>Faça seu cadastro</h1>
+
+          <Input name="name" icon={IoPersonOutline} placeholder="Nome" />
 
           <Input name="email" icon={IoAt} placeholder="E-mail" />
 
@@ -32,15 +27,15 @@ const SignIn: React.FC = () => (
             placeholder="Senha"
           />
 
-          <Button type="submit">Entrar</Button>
+          <Button type="submit">Cadastrar</Button>
         </form>
 
-        <Link to="/signup">
-          <FiLogIn />
-          Cadastrar
+        <Link to="/">
+          <FiArrowDownLeft />
+          Voltar para logon
         </Link>
       </AnimationContainer>
     </Content>
   </Container>
 );
-export default SignIn;
+export default SignUp;
